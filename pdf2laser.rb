@@ -1,11 +1,13 @@
 class Pdf2laser < Formula
-  url "http://zell.io/dist/pdf2laser/pdf2laser-0.1.0.tar.gz"
+  url "http://zell.io/dist/pdf2laser/pdf2laser-0.2.0.tar.gz"
   homepage "https://github.com/zellio/pdf2laser"
-  sha1 "cb32022dd54bda5427592dc15c243d77acc5a247"
+  sha1 "e61a97327206698f29519f1fa9173cfe6d7a17d5"
+
+  depends_on "ghostscript"
 
   def install
+    system "./configure", "--prefix=#{prefix}"
     system "make"
-    system "install", "-d", "-m", "755", "#{bin}"
-    system "install", "epilog", "#{bin}/pdf2laser"
+    system "make", "install"
   end
 end
