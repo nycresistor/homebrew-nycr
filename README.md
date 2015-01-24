@@ -3,3 +3,5 @@
 
 These formulae provide software written or packaged by NYC Resistor members
 for general consumption.
+
+Add this with: `brew tap nycresistor/nycr`
