@@ -1,7 +1,7 @@
 class Pdf2laser < Formula
-  url "http://zell.io/dist/src/pdf2laser/pdf2laser-0.2.1.tar.gz"
+  url "http://zell.io/dist/src/pdf2laser/pdf2laser-0.3.0.tar.gz"
   homepage "https://github.com/zellio/pdf2laser"
-  sha1 "4a2e117e8ffe905753cc57c53e62d845637c16da"
+  sha1 "3936c6b038ea02ce101431b3d503e290872a693d"
 
   depends_on "ghostscript"
 
