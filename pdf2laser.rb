@@ -8,6 +8,7 @@ class Pdf2laser < Formula
   depends_on "ghostscript"
 
   def install
+    ENV["PATH"] += ":/usr/local/bin"
     system "aclocal", "-I", "m5", "--install"
     system "autoheader"
     system "glibtoolizei", "--force"
