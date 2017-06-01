@@ -11,7 +11,7 @@ class Pdf2laser < Formula
     ENV["PATH"] += ":/usr/local/bin"
     system "aclocal", "-I", "m5", "--install"
     system "autoheader"
-    system "glibtoolizei", "--force"
+    system "glibtoolize", "--force"
     system "automake", "--add-missing", "--foreign"
     system "autoconf"
     system "./configure"
