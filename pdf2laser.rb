@@ -1,8 +1,8 @@
 class Pdf2laser < Formula
   desc "CLI tool printing pdf files to an Epilog laser cutter over the network"
   homepage "https://github.com/zellio/pdf2laser"
-  url "https://github.com/zellio/pdf2laser/archive/v0.4.0.tar.gz"
-  sha256 "f04524b882dde1ffe26c1f967169217c3c7607a9c7b93a2d2a3a8d50c5719e92"
+  url "https://github.com/zellio/pdf2laser/archive/v0.5.0.tar.gz"
+  sha256 "34920cb0a1e16acd879468536889d211daf2ebf2fce5f4d742d85179eb18616d"
 
   depends_on "automake" => :build
   depends_on "libtool" => :build
