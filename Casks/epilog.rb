@@ -7,7 +7,7 @@ cask 'epilog' do
   homepage 'https://www.epiloglaser.com/company/epilog-mac-driver.htm'
 
   depends_on formula: 'ghostscript'
-  depends_on macos: '>= :lion'
+  depends_on macos: '>= :sierra'
 
   container nested: 'EpilogApps.dmg'
 
