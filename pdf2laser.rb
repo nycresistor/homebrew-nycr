@@ -1,16 +1,22 @@
 class Pdf2laser < Formula
   desc "CLI tool printing pdf files to an Epilog laser cutter over the network"
   homepage "https://github.com/zellio/pdf2laser"
-  url "https://github.com/zellio/pdf2laser/archive/v0.5.0.tar.gz"
-  sha256 "34920cb0a1e16acd879468536889d211daf2ebf2fce5f4d742d85179eb18616d"
+  url "https://github.com/zellio/pdf2laser/archive/v1.0.0.tar.gz"
+  sha256 "01028395ccc8a12f95805c9d107e3f606a3a7d4bcbc69399563d1e1d47099af0"
 
+  depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "bison" => :build
+  depends_on "flex" => :build
   depends_on "libtool" => :build
   depends_on "ghostscript"
 
   def install
-    ENV["PATH"] += ":/usr/local/bin"
-    system "aclocal", "-I", "m5", "--install"
+    ENV["PATH"] += ":/usr/local/bin:/opt/homebrew/bin"
+    inreplace "configure.ac" do |conf|
+      conf.gsub!(/AC_PROG_LEX.*/, "AC_PROG_LEX")
+    end
+    system "aclocal", "-I", "m4", "--install"
     system "autoheader"
     system "glibtoolize", "--force"
     system "automake", "--add-missing", "--foreign"
