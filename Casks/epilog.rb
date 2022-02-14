@@ -1,6 +1,6 @@
 cask 'epilog' do
   version '1.0.0beta'
-  sha256 'c4b8f06cd8b4ef577a7c6e2542c64394faf904692b804805fca7019d3f6c007b'
+  sha256 'f198d808f5200af2347578ba65562968876bffbda7632355cda504e16165eed7'
 
   url 'https://www.epiloglaser.com/assets/downloads/drivers/mac/epilog-mac-driver.zip'
   name 'EpilogApps'
